@@ -1,7 +1,7 @@
 public class PracticeProblem {
 	
 	public static void main(String args[]) {
-		
+		System.out.println(oddSum(9, 2));
 	}
 
 	public static int lettersToFive(String sentence, char letter){
@@ -30,12 +30,15 @@ public class PracticeProblem {
 	}
  public static int oddSum(int num1, int num2){
 	int sum=0;
-	int num= num1;
-	for (int i=0;i<(num2-num1+1); i++){
-		if (num%2!=0){
-			sum=sum+num;
+	int numMin=Math.min(num1,num2);
+	int numMax= Math.max(num1,num2);
+	
+	
+	while(numMin<=numMax){
+		if (numMin%2!=0){
+			sum=sum+numMin;
 		}
-		num++;
+		numMin++;
 	}
 	return sum;
  }
